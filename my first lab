@@ -1,0 +1,27 @@
+package javaapplication1;
+class Singleton{
+    private static Singleton obj;
+    private Singleton(){
+        
+    }
+    public static Singleton getInstance(){
+        if(obj == null){
+            obj = new Singleton();
+        }
+        return obj;
+    }
+    public void myMethod(){
+        System.out.println("This is My class method");
+    }
+    
+}
+
+public class JavaApplication1 {
+
+    public static void main(String[] args) {
+     Singleton object;
+     object = Singleton.getInstance();
+     object.myMethod();
+    }
+    
+}
